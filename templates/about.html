@@ -1,4 +1,37 @@
 {% extends "index.html" %}
 {% block content %}
 <h3 class="text-center">{{ page_title }}</h3>
+<hr class="featurette my-4">
+
+{% for collect in collection %}
+<div class="mb-4 row featurette">
+    {% if loop.index % 2 != 0 %}
+
+    <div class="col-md-7">
+        <h4><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h4>
+        <p>{{ collect.description }}</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ collect.image_source }}" alt="" class="featurette-image image-responsive">
+    </div>
+
+    {% else %}
+
+    <div class="col-md-5">
+        <img src="{{ collect.image_source }}" alt="" class="featurette-image imga-responsive">
+    </div>
+    <div class="col-md-7">
+        <h4><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h4>
+        <p>{{ collect.description }}</p>
+    </div>
+
+    {% endif %}
+</div>
+
+{% if loop.index != loop.length %}
+<hr class="featurette-divider">
+{% endif %}
+
+{% endfor %}
+
 {% endblock %}

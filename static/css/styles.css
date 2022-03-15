@@ -11,6 +11,13 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+.col-md-5 img {
+  width: 100%;
+}
+
+
+
+/* styling for line btn the star */
 .divider-custom {
   margin: 1.25rem 0 1.5rem;
   width: 100%;
@@ -49,6 +56,7 @@
   color: #fff;
 }
 
+/* ends here */
 
 :root {
   --bs-blue: #0d6efd;
