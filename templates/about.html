@@ -23,7 +23,7 @@
 {% endblock %}
 
 {% block content %}
-<h3 class="text-center">{{ page_title }}</h3>
+<h4 class="text-center">{{ page_title }}</h4>
 <hr class="featurette my-4">
 
 {% for collect in collection %}
@@ -31,7 +31,7 @@
     {% if loop.index % 2 != 0 %}
 
     <div class="col-md-7">
-        <h4><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h4>
+        <h5><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h5>
         <div class="cards" style="width: 100%;">
             <div class="card-body">
                 <p class="card-text">{{ collect.description }}</p>
@@ -48,7 +48,7 @@
         <img src="{{ collect.image_source }}" alt="" class="featurette-image imga-responsive">
     </div>
     <div class="col-md-7">
-        <h4><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h4>
+        <h5><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h5>
         <div class="cards" style="width: 100%;">
             <div class="card-body">
                 <p class="card-text">{{ collect.description }}</p>
