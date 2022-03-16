@@ -31,7 +31,7 @@
     {% if loop.index % 2 != 0 %}
 
     <div class="col-md-7">
-        <h5><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h5>
+        <h6><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h6>
         <div class="cards" style="width: 100%;">
             <div class="card-body">
                 <p class="card-text">{{ collect.description }}</p>
@@ -48,7 +48,7 @@
         <img src="{{ collect.image_source }}" alt="" class="featurette-image imga-responsive">
     </div>
     <div class="col-md-7">
-        <h5><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h5>
+        <h6><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h6>
         <div class="cards" style="width: 100%;">
             <div class="card-body">
                 <p class="card-text">{{ collect.description }}</p>
