@@ -9,7 +9,11 @@
 
     <div class="col-md-7">
         <h4><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h4>
-        <p>{{ collect.description }}</p>
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <p class="card-text">{{ collect.description }}</p>
+            </div>
+        </div>
     </div>
     <div class="col-md-5">
         <img src="{{ collect.image_source }}" alt="" class="featurette-image image-responsive">
@@ -22,8 +26,13 @@
     </div>
     <div class="col-md-7">
         <h4><a href="/about/{{ collect.url }}"> {{ loop.index }}. <u>{{ collect.name }}</u></a></h4>
-        <p>{{ collect.description }}</p>
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <p class="card-text">{{ collect.description }}</p>
+            </div>
+        </div>
     </div>
+
 
     {% endif %}
 </div>

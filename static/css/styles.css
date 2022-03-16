@@ -11,10 +11,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
 .col-md-5 img {
   width: 100%;
 }
-
 
 
 /* styling for line btn the star */
