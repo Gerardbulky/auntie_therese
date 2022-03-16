@@ -71,10 +71,21 @@
 
     <!-- Main Content -->
     <div class="container">
-
         {% block content %}
         {% endblock %}
+    </div>
 
+    <!-- aunties gallary -->
+
+    <div class="container mb-4">
+        <h2 class="text-center">Aunties Gallery</h2>
+        <hr>
+        <br>
+        {% for image in images %}
+        <img src="{{ image.image_source }}" class="img-thumbnail" style="width: 25rem; margin-right: 10px; padding: 0;"
+            alt="...">
+
+        {% endfor %}
     </div>
 
     <!-- Footer-->

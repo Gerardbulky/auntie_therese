@@ -12,9 +12,8 @@
  */
 
 
-.container {
-  margin: 0;
-  padding: 0;
+.cards {
+  word-wrap: break-word;
 }
 
 .col-md-5 img {
