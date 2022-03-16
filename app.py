@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     data = []
-    with open("data/data.json", "r") as json_data:
+    with open("data/aunt-img.json", "r") as json_data:
         data = json.load(json_data)
     return render_template("index.html", images=data)
 
