@@ -6,7 +6,7 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("secret_key")
+app.secret_key = os.environ.get("SECRET_KEY")
 
 @app.route("/")
 def index():
@@ -42,7 +42,8 @@ def about_member(member_name):
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        flash("Thanks {}, message has been sent.".format(request.form.get("name")))
+        flash("Thanks {}, message has been sent.".format(
+            request.form.get("name")))
     return render_template("contact.html", page_title="Condolense Message")
 
 
