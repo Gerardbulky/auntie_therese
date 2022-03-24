@@ -42,7 +42,7 @@ def about_member(member_name):
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        flash("Thanks {}, message has been sent.".format(
+        flash("Thanks {}, your message has been sent.".format(
             request.form.get("name")))
     return render_template("contact.html", page_title="Condolense Message")
 
