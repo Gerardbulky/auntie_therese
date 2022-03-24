@@ -1,4 +1,7 @@
 {% extends "index.html" %}
+
+
+
 <!-- Page Header-->
 {% block header %}
 <header class="masthead" style="background-image: url('static/assets/header-image/angel-auntie.jpg')">
@@ -21,6 +24,29 @@
 </header>
 {% endblock %}
 
+{% block message %}
+<section>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row flashes my-2">
+        <div class="col" style="background-color: rgb(183, 240, 232); text-align: center;">
+            <h4 role="alert" aria-live="assertive" aria-atomic="true" id="element" class="toast" data-autohide="false"
+                style="max-width: 80%; display: contents;">
+
+                <div class="toast-body" style="font-size: x-large; margin: 7px;">
+                    {{ message }}
+                </div>
+            </h4>
+        </div>
+    </div>
+</section>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+{% endblock %}
+
 {% block content %}
 <h3 class="text-center">{{ page_title }}</h3>
 
@@ -29,7 +55,7 @@
         <p><small> You can get in touch with the family with your Name and condolense message. They will be glad to hear
                 from
                 you!</small></p>
-        <form onsubmit="return sendMail(this);" methods="POST" name="sentMessage" id="contactForm" novalidate>
+        <form onsubmit="return sendMail(this);" method="POST" name="sentMessage" id="contactForm" novalidate>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                     <label>Name</label>

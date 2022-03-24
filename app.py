@@ -1,9 +1,12 @@
 import os
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, request
+if os.path.exists("env.py"):
+    import env
 
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
 
 
 @app.route("/")
@@ -36,8 +39,11 @@ def about_member(member_name):
     return render_template("member.html", item=member)
 
 
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        flash("Thanks {}, message has been sent.".format(request.form.get("name")))
     return render_template("contact.html", page_title="Condolense Message")
 
 
@@ -45,4 +51,4 @@ def contact():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)

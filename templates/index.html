@@ -29,6 +29,7 @@
 </head>
 
 <body>
+
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
@@ -49,6 +50,9 @@
             </div>
         </div>
     </nav>
+
+
+
     <!-- Page Header-->
     {% block header %}
     <header class="masthead" style="background-image: url('static/assets/header-image/auntie-te.jpg')">
@@ -69,6 +73,10 @@
             </div>
         </div>
     </header>
+    {% endblock %}
+
+    <!-- Flashed Message Header-->
+    {% block message %}
     {% endblock %}
 
     <!-- Main Content -->
